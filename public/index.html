@@ -1,54 +1,64 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>📚 Lectures — Suivi</title>
   <link rel="manifest" href="./manifest.json">
-  <meta name="theme-color" content="#11131a"/>
+  <meta name="theme-color" content="#11131a" />
   <link rel="stylesheet" href="./style.css" />
 </head>
+
 <body>
-<header>
-  <h1>📚 Suivi de lectures</h1>
-  <div class="controls">
-    <input id="search" placeholder="Rechercher titre/tag…" />
-    <select id="filterType">
-      <option value="">Tous types</option>
-      <option>manga</option><option>manhwa</option><option>webtoon</option>
-      <option>roman</option><option>article</option><option>autre</option>
-    </select>
-    <label class="chk"><input type="checkbox" id="onlyFav" /> Favoris</label>
-    <button id="btnAdd">Ajouter</button>
-    <button id="btnImport">Importer</button>
-    <button id="btnExport">Exporter</button>
-  </div>
-  <small id="syncInfo">Sync…</small>
-</header>
-<main><ul id="list" class="cards"></ul></main>
-<dialog id="dlg">
-  <form id="frm">
-    <h3 id="dlgTitle">Ajouter / Éditer</h3>
-    <div class="grid">
-      <input name="id" placeholder="ID unique (ex: naruto)" required />
-      <input name="title" placeholder="Titre" required />
-      <input name="type" placeholder="Type (manga, roman…)" />
-      <input name="sourceUrl" placeholder="URL (optionnel)" />
-      <input name="coverUrl" placeholder="Cover URL (ex: /img/naruto.jpg)" />
-      <input name="coverAlt" placeholder="Cover Alt (texte alternatif)" />
-      <input name="chapter" type="number" placeholder="Chapitre" />
-      <input name="page" type="number" placeholder="Page" />
-      <input name="percent" type="number" step="0.01" placeholder="% (optionnel)" />
-      <input name="maxChapter" type="number" placeholder="Max chapitre (optionnel)" />
-      <input name="maxPage" type="number" placeholder="Max page (optionnel)" />
-      <input name="tags" placeholder="Tags, séparés par des virgules" />
+  <header>
+    <h1>📚 Suivi de lectures</h1>
+    <div class="controls">
+      <input id="search" placeholder="Rechercher titre/tag…" />
+      <select id="filterType">
+        <option value="">Tous types</option>
+        <option>manga</option>
+        <option>manhwa</option>
+        <option>webtoon</option>
+        <option>roman</option>
+        <option>article</option>
+        <option>autre</option>
+      </select>
+      <label class="chk"><input type="checkbox" id="onlyFav" /> Favoris</label>
+      <button id="btnAdd">Ajouter</button>
+      <button id="btnImport">Importer</button>
+      <button id="btnExport">Exporter</button>
     </div>
-    <textarea name="notes" placeholder="Notes…"></textarea>
-    <label class="chk"><input type="checkbox" name="favorite" /> Favori</label>
-    <menu><button type="submit">Enregistrer</button><button type="button" id="btnCancel">Annuler</button></menu>
-  </form>
-</dialog>
-<input type="file" id="fileInput" accept="application/json" hidden />
-<script>if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('./service-worker.js'); }); }</script>
-<script src="./app.js"></script>
-</body></html>
+    <small id="syncInfo">Sync…</small>
+  </header>
+  <main>
+    <ul id="list" class="cards"></ul>
+  </main>
+  <dialog id="dlg">
+    <form id="frm">
+      <h3 id="dlgTitle">Ajouter / Éditer</h3>
+      <div class="grid">
+        <input name="id" placeholder="ID unique (ex: naruto)" required />
+        <input name="title" placeholder="Titre" required />
+        <input name="type" placeholder="Type (manga, roman…)" />
+        <input name="sourceUrl" placeholder="URL (optionnel)" />
+        <input name="coverUrl" placeholder="Cover URL (ex: /img/naruto.jpg)" />
+        <input name="coverAlt" placeholder="Cover Alt (texte alternatif)" />
+        <input name="chapter" type="number" placeholder="Chapitre" />
+        <input name="page" type="number" placeholder="Page" />
+        <input name="percent" type="number" step="0.01" placeholder="% (optionnel)" />
+        <input name="maxChapter" type="number" placeholder="Max chapitre (optionnel)" />
+        <input name="maxPage" type="number" placeholder="Max page (optionnel)" />
+        <input name="tags" placeholder="Tags, séparés par des virgules" />
+      </div>
+      <textarea name="notes" placeholder="Notes…"></textarea>
+      <label class="chk"><input type="checkbox" name="favorite" /> Favori</label>
+      <menu><button type="submit">Enregistrer</button><button type="button" id="btnCancel">Annuler</button></menu>
+    </form>
+  </dialog>
+  <input type="file" id="fileInput" accept="application/json" hidden />
+  <script>if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('./service-worker.js'); }); }</script>
+  <script src="./app.js"></script>
+</body>
+
+</html>
