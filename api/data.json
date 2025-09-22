@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2025-09-22T15:14:16Z",
+  "items": [
+    {
+      "id": "naruto",
+      "title": "Naruto",
+      "type": "manga",
+      "sourceUrl": "https://example.org/naruto",
+      "progress": {
+        "chapter": 312,
+        "page": 1,
+        "percent": null
+      },
+      "max": {
+        "chapter": null,
+        "page": null
+      },
+      "notes": "Arc Pain",
+      "favorite": true,
+      "cover": {
+        "url": "/img/placeholder.jpg",
+        "alt": "ImageCouverture Naruto"
+      },
+      "lastReadAt": "2025-09-22T15:14:16Z"
+    }
+  ]
+}
